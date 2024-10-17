@@ -92,9 +92,7 @@ export default function BookingsTable() {
           <div className="relative flex items-center gap-5">
             <Tooltip color="foreground" content="Details">
               <span
-                onClick={() =>
-                  router.push("/admin/dashboard/booking")
-                }
+                onClick={() => router.push("/admin/dashboard/booking")}
                 className="text-lg cursor-pointer active:opacity-50"
               >
                 <EyeIcon />
@@ -133,9 +131,11 @@ export default function BookingsTable() {
         />
       </div>
       <Table
+        shadow="none"
         color={"primary"}
         selectionMode="multiple"
         aria-label="Example table with custom cells"
+        className="border border-gray-500/20 rounded-xl"
       >
         <TableHeader columns={columns}>
           {(column) => (
