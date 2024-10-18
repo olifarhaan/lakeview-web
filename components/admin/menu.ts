@@ -28,19 +28,24 @@ const menu = [
     title: "Reservations",
     items: [
       {
-        name: "Manage Bookings",
+        name: "Check-in/Out",
         icon: EventIconFilled,
-        href: "/bookings",
+        href: "/bookings/check-in-out",
       },
       {
-        name: "Room Inventory",
-        icon: BedFilled,
-        href: "/rooms/inventory",
-      },
-      {
-        name: "Room Classes",
+        name: "Room Types",
         icon: BedFilled,
         href: "/rooms/classes",
+      },
+      {
+        name: "Bookings",
+        icon: EventIconFilled,
+        href: "/bookings/all",
+      },
+      {
+        name: "Room Availability",
+        icon: BedFilled,
+        href: "/rooms/inventory",
       },
     ],
   },
