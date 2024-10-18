@@ -35,7 +35,12 @@ const menu = [
       {
         name: "Room Inventory",
         icon: BedFilled,
-        href: "/rooms",
+        href: "/rooms/inventory",
+      },
+      {
+        name: "Room Classes",
+        icon: BedFilled,
+        href: "/rooms/classes",
       },
     ],
   },

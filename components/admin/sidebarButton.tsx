@@ -17,7 +17,7 @@ const SidebarButton: React.FC<SidebarButtonProps> = ({
     <button
       onClick={onClick}
       className={`
-        flex gap-2 items-center w-full px-4 py-2 my-1 text-left transition duration-200 rounded-lg
+        flex gap-2 items-center w-full px-4 py-2 my-1 text-left transition-colors duration-200 rounded-lg
         ${active ? "dark:bg-primary/20 bg-primary dark:text-primary text-white" : "hover:bg-gray-500/15 grayscale opacity-70"}
         `}
     >

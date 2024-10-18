@@ -1,0 +1,51 @@
+[
+    {
+        "id": "room1",
+        "maxCapacity": 2,
+        "roomsAssociated": 10,
+        "roomsAvailable": 6,
+        "thumbnailUrl": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/448379908.jpg?k=d9bc2216932d6d5dbad4f1f5fe0b6c39bf50435f56cbdccebac72ed7a42f3adf&o=&hp=1",
+        "basePrice": 3200,
+        "title": "Deluxe Room",
+        "description": "A spacious room with a queen-size bed, private bathroom, and a city view."
+    },
+    {
+        "id": "room2",
+        "maxCapacity": 2,
+        "roomsAssociated": 8,
+        "roomsAvailable": 4,
+        "thumbnailUrl": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/de/e1/8c/rest-inn-skr-a-petrichor.jpg?w=700&h=-1&s=1",
+        "basePrice": 1200,
+        "title": "Standard Room",
+        "description": "A comfortable room with a double bed and all basic amenities."
+    },
+    {
+        "id": "room3",
+        "maxCapacity": 2,
+        "roomsAssociated": 5,
+        "roomsAvailable": 2,
+        "thumbnailUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSToZG7UVyvlrxWTVjI-zIGd2oGlSj9MAeLgg&s",
+        "basePrice": 5800,
+        "title": "Family Suite",
+        "description": "Perfect for families, this suite has two bedrooms, a living area, and a kitchenette."
+    },
+    {
+        "id": "room4",
+        "maxCapacity": 1,
+        "roomsAssociated": 12,
+        "roomsAvailable": 8,
+        "thumbnailUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5nPvWSog3VI_TyfYVllIbgKqsYwjzuyRZPQ&s",
+        "basePrice": 7500,
+        "title": "Single Room"
+    },
+    {
+        "id": "room5",
+        "maxCapacity": 3,
+        "roomsAssociated": 6,
+        "roomsAvailable": 3,
+        "thumbnailUrl": "https://www.usatoday.com/gcdn/-mm-/05b227ad5b8ad4e9dcb53af4f31d7fbdb7fa901b/c=0-64-2119-1259/local/-/media/USATODAY/USATODAY/2014/08/13/1407953244000-177513283.jpg?width=2119&height=1195&fit=crop&format=pjpg&auto=webp",
+        "basePrice": 11000,
+        "title": "Executive Room",
+        "description": "Designed for business travelers, featuring a work desk and complimentary high-speed Wi-Fi."
+    }
+]
