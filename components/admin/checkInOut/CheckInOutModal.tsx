@@ -40,10 +40,8 @@ export default function CheckInOutModal({
     switch (currentLevel) {
       case 0:
         return (
-          <div className="flex justify-center">
-            <div className="w-1/2">
-              <BookingsTable />
-            </div>
+          <div className="max-w-[600px] m-auto">
+            <BookingsTable />
           </div>
         );
 
@@ -63,16 +61,12 @@ export default function CheckInOutModal({
       >
         <div className="h-full p-4 bg-background shadow-lg rounded-t-xl">
           <div className="w-full flex items-center justify-between">
-            <h2 className="ml-4 text-2xl font-bold">Guest Check-in</h2>
-            <Button
-              onClick={() => setVisible(false)}
-              color="danger"
-              className="p-2 rounded-full transition-colors duration-150 hover:bg-gray-500/20"
-            >
+            <h2 className="text-2xl font-bold">Guest Check-in</h2>
+            <Button onClick={() => setVisible(false)} color="danger">
               Cancel
             </Button>
           </div>
-          <div className="m-auto px-4 w-1/2">
+          <div className="m-auto mt-2 max-w-[600px]">
             <div className="flex justify-between font-bold mb-2">
               <p>{levels[currentLevel]}</p>
               <p>
@@ -88,7 +82,7 @@ export default function CheckInOutModal({
               />
             </div>
           </div>
-          <div className="p-8">{renderView()}</div>
+          <div className="mt-4">{renderView()}</div>
         </div>
       </div>
     </div>

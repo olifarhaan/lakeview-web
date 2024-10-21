@@ -11,7 +11,7 @@ import { BedFilled, BoxFilled, UsersFilled } from "../icons";
 
 export default function ClassesCard(props: RoomClass) {
   return (
-    <Card className="py-4 w-fit cursor-pointer shadow-sm border border-gray-500/20">
+    <Card className="py-4 w-fit cursor-pointer shadow-sm border border-content2">
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
         <div className="w-full flex justify-between items-center">
           <p className="p-1 px-2 border border-gray-500/20 rounded-full text-tiny font-medium bg-success/10 text-success">

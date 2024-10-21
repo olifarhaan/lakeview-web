@@ -93,7 +93,7 @@ export default function BookingsTable() {
   }, []);
 
   return (
-    <div className="py-4 border border-gray-500/20 rounded-xl">
+    <div className="py-4 border border-gray-500/20 rounded-xl bg-content1">
       <div className="mb-1 px-4">
         <Input
           isClearable

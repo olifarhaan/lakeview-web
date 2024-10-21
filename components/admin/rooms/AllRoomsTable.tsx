@@ -14,10 +14,9 @@ import {
   ChipProps,
   Input,
 } from "@nextui-org/react";
-import { columns, users } from "./data";
+import rooms from "@/data/rooms.json";
 import { EyeIcon } from "@/components/icons/EyeIcon";
 import { EditIcon } from "@/components/icons/EditIcon";
-import { DeleteIcon } from "@/components/icons/DeleteIcon";
 import { SearchIcon } from "@/components/icons2";
 import { useRouter } from "next/navigation";
 
@@ -27,9 +26,16 @@ const statusColorMap: Record<string, ChipProps["color"]> = {
   "checked-in": "secondary",
 };
 
-type User = (typeof users)[0];
+const columns = [
+  { name: "ROOM NO.", uid: "number" },
+  { name: "FLOOR", uid: "floor" },
+  { name: "STATUS", uid: "status" },
+  { name: "", uid: "actions" },
+];
 
-export default function BookingsTable() {
+type Room = (typeof rooms)[0];
+
+export default function AllRoomsTable() {
   const [searchString, setSearchString] = useState<string>("");
   const [filteredData, setFileredData] = useState<any[]>([]);
 
@@ -37,50 +43,44 @@ export default function BookingsTable() {
 
   useEffect(() => {
     if (!searchString || searchString === "") {
-      setFileredData(users);
+      setFileredData(rooms);
       return;
     }
 
-    const ft = users?.filter(
+    const ft = rooms?.filter(
       (item) =>
         item.id.toString().includes(searchString?.toLocaleLowerCase()) ||
-        item.name.toLowerCase().includes(searchString?.toLocaleLowerCase()) ||
-        item.email.toLowerCase().includes(searchString?.toLocaleLowerCase())
+        item.occupant_name
+          ?.toLowerCase()
+          .includes(searchString?.toLocaleLowerCase()) ||
+        item.booking_reference
+          ?.toLowerCase()
+          .includes(searchString?.toLocaleLowerCase())
     );
     setFileredData(ft);
   }, [searchString]);
 
-  const renderCell = React.useCallback((user: User, columnKey: React.Key) => {
-    const cellValue = user[columnKey as keyof User];
+  const renderCell = React.useCallback((room: Room, columnKey: React.Key) => {
+    const cellValue = room[columnKey as keyof Room];
 
     switch (columnKey) {
-      case "id":
+      case "number":
         return (
           <div className="my-2">
-            <p className="italic opacity-80">{user.id}</p>
+            <p className="opacity-80">{room.room_number}</p>
           </div>
         );
-      case "name":
+      case "floor":
         return (
           <div className="my-2">
-            <p>{user.name}</p>
-            <p className="opacity-50 text-sm">{user.email}</p>
-          </div>
-        );
-      case "role":
-        return (
-          <div className="flex flex-col">
-            <p className="text-bold text-sm capitalize">{cellValue}</p>
-            <p className="text-bold text-sm capitalize text-default-400">
-              {user.team}
-            </p>
+            <p>{room.floor}</p>
           </div>
         );
       case "status":
         return (
           <Chip
             className="capitalize"
-            color={statusColorMap[user.status]}
+            color={statusColorMap[room.status]}
             size="sm"
             variant="flat"
           >
@@ -122,7 +122,7 @@ export default function BookingsTable() {
           isClearable
           onClear={() => setSearchString("")}
           radius="lg"
-          placeholder="Seach booking"
+          placeholder="Seach room"
           value={searchString}
           onChange={(e) => setSearchString(e.target.value)}
           startContent={

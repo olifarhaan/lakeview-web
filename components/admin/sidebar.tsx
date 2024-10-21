@@ -45,11 +45,6 @@ export default function Sidebar() {
       </div>
 
       <div className="p-4 border-t border-gray-500/25">
-        <div className="flex font-semibold  text-sm items-center gap-2 p-2 mb-4 cursor-pointer">
-          <ThemeSwitch />
-          <p>Dark theme</p>
-        </div>
-
         <User
           name="Joi Doe"
           description="Receptionist"

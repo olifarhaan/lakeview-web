@@ -17,7 +17,7 @@ export default function CheckInOutView() {
           onClick: () => {
             setModelOpen(true);
           },
-          label: "",
+          label: "Check in",
         }}
       />
       <CheckInOutCard
@@ -26,7 +26,7 @@ export default function CheckInOutView() {
           onClick: () => {
             setModelOpen(true);
           },
-          label: "",
+          label: "Check out",
         }}
       />
 

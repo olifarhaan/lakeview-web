@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "room_number": "101",
+        "floor": 1,
+        "status": "vacant",
+        "last_cleaned": "2024-10-17",
+        "occupant_name": null,
+        "booking_reference": null
+    },
+    {
+        "id": 2,
+        "room_number": "102",
+        "floor": 1,
+        "status": "checked-in",
+        "last_cleaned": "2024-10-16",
+        "occupant_name": "John Doe",
+        "booking_reference": "ABC123456"
+    },
+    {
+        "id": 3,
+        "room_number": "201",
+        "floor": 2,
+        "status": "cleaning",
+        "last_cleaned": "2024-10-19",
+        "occupant_name": null,
+        "booking_reference": null
+    },
+    {
+        "id": 4,
+        "room_number": "202",
+        "floor": 2,
+        "status": "vacant",
+        "last_cleaned": "2024-10-18",
+        "occupant_name": null,
+        "booking_reference": null
+    }
+]

@@ -13,18 +13,17 @@ interface Props {
 
 export default function CheckInOutCard(props: Props) {
   return (
-    <Card isFooterBlurred radius="lg" className="border-none">
-      <div className="h-56 aspect-square p-4 bg-primary/10"></div>
+    <Card isFooterBlurred radius="lg" shadow="sm" className="border-none">
+      <div className="h-56 aspect-square p-4"></div>
       <CardFooter className="absolute bottom-0">
         <Button
-          className="font-medium text-white bg-black/20"
-          variant="flat"
-          color="default"
-          radius="lg"
+          className="font-medium"
+          color="primary"
+          radius="full"
           size="lg"
           onClick={props.action.onClick}
         >
-          Check in
+          {props.action.label}
         </Button>
       </CardFooter>
     </Card>

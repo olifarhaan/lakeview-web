@@ -30,22 +30,17 @@ const menu = [
       {
         name: "Check-in/Out",
         icon: EventIconFilled,
-        href: "/bookings/check-in-out",
-      },
-      {
-        name: "Room Types",
-        icon: BedFilled,
-        href: "/rooms/classes",
+        href: "/check-in-out",
       },
       {
         name: "Bookings",
         icon: EventIconFilled,
-        href: "/bookings/all",
+        href: "/bookings",
       },
       {
-        name: "Room Availability",
+        name: "Rooms",
         icon: BedFilled,
-        href: "/rooms/inventory",
+        href: "/rooms",
       },
     ],
   },
