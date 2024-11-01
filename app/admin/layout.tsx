@@ -1,7 +1,13 @@
-export default function RootLayout({
+import { Providers } from "../providers";
+
+export default function AdminLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return (
+    <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
+      {children}
+    </Providers>
+  );
 }

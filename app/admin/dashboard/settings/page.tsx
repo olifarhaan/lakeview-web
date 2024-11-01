@@ -7,7 +7,7 @@ export default function Settings() {
   return (
     <div>
       <SectionHeader icon={<SettingsFilled size={32} />} title="Settings" />
-      <div className="mx-8 p-4 rounded-xl bg-content1 border border-content2 divide-y-1 divide-content2">
+      <div className="max-w-[1200px] m-auto p-4 rounded-xl bg-content1 border border-content2 divide-y-1 divide-content2">
         <div className="flex gap-2 divide-x-1 divide-content2">
           <div className="w-1/2">
             <p className="font-semibold">Dark mode</p>
