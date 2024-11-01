@@ -3,5 +3,5 @@ export default function PublicLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return <div className="font-dmSans">{children}</div>;
 }

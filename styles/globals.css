@@ -1,3 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.font-dmSans {
+    font-family: "DM Sans", sans-serif;
+}
+
+
+@keyframes zoom-out {
+    0% {
+        opacity: 0;
+        transform: translateY(10%) scale(2);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.animate-zoom-out {
+    animation: zoom-out 750ms ease-out normal both;
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-50%) scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.animate-slide-down {
+    animation: slide-down 750ms ease-out normal both;
+}
