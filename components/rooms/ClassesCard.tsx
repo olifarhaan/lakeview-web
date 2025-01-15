@@ -11,7 +11,7 @@ import { BedFilled, BoxFilled, UsersFilled } from "../icons";
 
 export default function ClassesCard(props: RoomClass) {
   return (
-    <Card className="py-4 w-fit cursor-pointer shadow-sm border border-content2">
+    <Card className="py-4 w-fit cursor-pointer shadow-sm border border-content2 group">
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
         <div className="w-full flex justify-between items-center">
           {/* <p className="p-1 px-2 border border-gray-500/20 rounded-full text-tiny font-medium bg-success/10 text-success">
@@ -31,7 +31,10 @@ export default function ClassesCard(props: RoomClass) {
               </small>
             </div>
           </div>
-          <Button color="primary" className="w-fit h-fit rounded-full py-2 border bg-transparent text-primary-500">
+          <Button
+            color="primary"
+            className="w-fit h-fit rounded-xl py-2 border bg-transparent text-primary-500"
+          >
             <BoxFilled size={16} />
             Manage
           </Button>
@@ -47,15 +50,18 @@ export default function ClassesCard(props: RoomClass) {
         </div>
       </CardHeader>
       <CardBody className="overflow-visible py-2">
-        <Image
-          alt="Card background"
-          className="object-cover rounded-xl aspect-video"
-          src={
-            props?.thumbnailUrl ||
-            "https://thumbs.dreamstime.com/b/web-324830775.jpg"
-          }
-          height={180}
-        />
+        <div className="overflow-hidden aspect-video rounded-xl h-48">
+          <Image
+            alt="Card background"
+            className="object-cover group-hover:scale-110 duration-500"
+            src={
+              props?.thumbnailUrl ||
+              "https://thumbs.dreamstime.com/b/web-324830775.jpg"
+            }
+            height={"100%"}
+            width={"100%"}
+          />
+        </div>
       </CardBody>
       {/* <CardFooter className="flex flex-col items-start">
         <div className="my-2 w-full flex gap-3">

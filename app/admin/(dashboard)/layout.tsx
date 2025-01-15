@@ -19,11 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="fixed flex h-screen w-full bg-gray-100">
+    <div className="fixed flex h-screen w-full bg-gray-200">
       <div className="dark:bg-gray-500/15 ">
         <Sidebar />
       </div>
-      <main className="flex-1 rounded-tl-2xl mt-4 bg-gray-50 border-l border-t border-gray-500/20 dark:bg-gray-500/10">
+      <main className="flex-1 rounded-tl-2xl mt-4 bg-gray-50 border-gray-500/20 dark:bg-gray-500/10">
         {children}
       </main>
     </div>

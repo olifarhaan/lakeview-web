@@ -12,15 +12,15 @@ export default function Home() {
         </div>
         <div className="">
           <div className="flex items-center gap-4">
-            <button className="flex items-center gap-1 rounded-full text-sm p-4 bg-green-500/10 hover:bg-green-500/15 text-green-500 font-semibold transition-colors duration-150">
+            <button className="flex items-center gap-1 rounded-xl h-10 text-sm p-4 bg-green-500/10 hover:bg-green-500/15 text-green-500 font-semibold transition-colors duration-150">
               <EventIconFilled className="w-5 -translate-y-0.5" />
               Check in
             </button>
-            <button className="flex items-center gap-1 rounded-full text-sm p-4 bg-orange-500/10 hover:bg-orange-500/15 text-orange-500 font-semibold transition-colors duration-150">
+            <button className="flex items-center gap-1 rounded-xl h-10 text-sm p-4 bg-orange-500/10 hover:bg-orange-500/15 text-orange-500 font-semibold transition-colors duration-150">
               <EventIconFilled className="w-5 -translate-y-0.5" />
               Check out
             </button>
-            <button className="flex items-center gap-1 rounded-full text-sm p-4 bg-violet-500/10 hover:bg-violet-500/15 text-violet-500 font-semibold transition-colors duration-150">
+            <button className="flex items-center gap-1 rounded-xl h-10 text-sm p-4 bg-violet-500/10 hover:bg-violet-500/15 text-violet-500 font-semibold transition-colors duration-150">
               <BedFilled className="w-5 -translate-y-0.5" />
               Rooms vacant
             </button>
