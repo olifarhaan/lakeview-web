@@ -3,7 +3,6 @@
 import React from "react";
 import { User } from "@nextui-org/user";
 import SidebarButton from "./sidebarButton";
-import { ThemeSwitch } from "../theme-switch";
 import menu from "./menu";
 import { usePathname, useRouter } from "next/navigation";
 
@@ -32,8 +31,12 @@ export default function Sidebar() {
               )}
               {group.items.map((item, itemIndex) => (
                 <SidebarButton
-                  active={pathname.includes("/admin/dashboard" + item.href)}
-                  onClick={() => router.push("/admin/dashboard" + item.href)}
+                  active={
+                    index === 0 && itemIndex === 0
+                      ? pathname === "/admin"
+                      : pathname.includes("/admin" + item.href)
+                  }
+                  onClick={() => router.push("/admin" + item.href)}
                   key={itemIndex}
                   icon={<item.icon size={18} />}
                   label={item.name}

@@ -5,7 +5,7 @@ import Sidebar from "@/components/admin/sidebar";
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    template: `%s - Admin`,
   },
   description: siteConfig.description,
   icons: {
