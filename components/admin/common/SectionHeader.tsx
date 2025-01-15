@@ -18,7 +18,7 @@ interface Props {
 
 export default function SectionHeader(props: Props) {
   return (
-    <Card className="sticky top-2 z-[99] m-8 p-2 flex justify-between items-center shadow-none border border-gray-500/20 rounded-2xl">
+    <Card className="sticky top-2 z-[99] m-6 py-2 px-0 flex justify-between items-center bg-transparent shadow-none rounded-2xl">
       <CardHeader className="flex flex-row justify-between">
         <div className="flex items-center gap-2">
           {props.icon}

@@ -14,10 +14,24 @@ export default function ClassesCard(props: RoomClass) {
     <Card className="py-4 w-fit cursor-pointer shadow-sm border border-content2">
       <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
         <div className="w-full flex justify-between items-center">
-          <p className="p-1 px-2 border border-gray-500/20 rounded-full text-tiny font-medium bg-success/10 text-success">
+          {/* <p className="p-1 px-2 border border-gray-500/20 rounded-full text-tiny font-medium bg-success/10 text-success">
             {props.roomsAvailable} Rooms available
-          </p>
-          <Button color="primary" className="w-fit h-fit rounded-full py-2">
+          </p> */}
+          <div className="my-2 flex gap-3">
+            <div className="flex gap-1 items-center opacity-70">
+              <BedFilled size={17} />
+              <small className="mt-[1.75px] font-bold">
+                {props.roomsAssociated}
+              </small>
+            </div>
+            <div className="flex gap-1 items-center opacity-70">
+              <UsersFilled size={18} />
+              <small className="mt-[1.75px] font-bold">
+                {props.maxCapacity}
+              </small>
+            </div>
+          </div>
+          <Button color="primary" className="w-fit h-fit rounded-full py-2 border bg-transparent text-primary-500">
             <BoxFilled size={16} />
             Manage
           </Button>
@@ -43,7 +57,7 @@ export default function ClassesCard(props: RoomClass) {
           height={180}
         />
       </CardBody>
-      <CardFooter className="flex flex-col items-start">
+      {/* <CardFooter className="flex flex-col items-start">
         <div className="my-2 w-full flex gap-3">
           <div className="flex gap-1 items-center opacity-70">
             <BedFilled size={17} />
@@ -58,7 +72,7 @@ export default function ClassesCard(props: RoomClass) {
             </small>
           </div>
         </div>
-      </CardFooter>
+      </CardFooter> */}
     </Card>
   );
 }

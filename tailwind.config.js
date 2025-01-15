@@ -15,7 +15,7 @@ module.exports = {
       },
       colors : {
         "primary" : {
-          "DEFAULT" : "#f54079"
+          "DEFAULT" :  "#006FEE"//"#f54079"
         }
       }
     },
